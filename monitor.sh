@@ -2,7 +2,13 @@
 
 if [ "$EUID" -ne 0 ]
   then echo -e "\t\tRun as root"
-  exit 1
+  exit
+fi
+
+if [ $# -eq 0 ]
+  then
+    echo -e "No interface argument supplied\n\nUsage:\n\t./monitor.sh INTERFACE_NAME"
+    exit 
 fi
 
 INTERFACE=$1
