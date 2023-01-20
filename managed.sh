@@ -19,6 +19,8 @@ fi
 
 INTERFACE=$1
 
+systemctl unmask wpa_supplicant
 ip link set dev $INTERFACE down
 iwconfig $INTERFACE mode managed
 ip link set dev $INTERFACE up
+systemctl restart wpa_supplicant
