@@ -18,3 +18,7 @@ if [ $# -gt 1 ]
 fi
 
 INTERFACE=$1
+
+ip link set dev $INTERFACE down
+iwconfig $INTERFACE mode managed
+ip link set dev $INTERFACE up
