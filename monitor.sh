@@ -11,6 +11,12 @@ if [ $# -eq 0 ]
     exit 
 fi
 
+if [ $# -gt 1 ]
+  then
+    echo -e "Too many arguments supplied\n\nUsage:\n\t./monitor.sh INTERFACE_NAME"
+    exit 
+fi
+
 INTERFACE=$1
 
 systemctl mask wpa_supplicant
