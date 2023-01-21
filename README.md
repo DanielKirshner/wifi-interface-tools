@@ -5,7 +5,7 @@ Common bash scripts for wifi interfaces and adapters.
 ## Requirements
 ```
 sudo apt update
-sudo apt install net-tools iproute2 make -y
+sudo apt install net-tools iproute2 -y
 ```
 
 ## Usage
