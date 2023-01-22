@@ -13,6 +13,10 @@ Give permissions:
 ```
 chmod +x managed.sh monitor.sh
 ```
+Identify your interface name by running:
+```
+ifconfig -a
+```
 Enter monitor mode:
 ```
 sudo ./monitor.sh INTERFACE_NAME
